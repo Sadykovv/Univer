@@ -344,9 +344,12 @@ private: System::Void checkBox_airvideo_CheckedChanged(System::Object^ sender, S
 {}
 private: System::Void button_download_Click(System::Object^ sender, System::EventArgs^ e)
 {
-
 	Functions f;
-	f.Insert(textBox_FIO->Text);
+	f.Insert(textBox_FIO->Text, textBox_Phone->Text,
+		textBox_email->Text, textBox_timing->Text,
+		checkBox_interior->Checked,checkBox_4k->Checked,
+		checkBox_airvideo->Checked,comboBox_format->SelectedItem->ToString(),
+		richTextBox_ideaofvideo->Text);
 }
 private: System::Void textBox_email_TextChanged(System::Object^ sender, System::EventArgs^ e)
 {}
