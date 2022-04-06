@@ -59,6 +59,16 @@ namespace Univer {
 	private: System::Windows::Forms::DataGridViewCheckBoxColumn^ Column7;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column8;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column9;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column10;
+
+
+
+
+
+
+
+
+
 
 
 
@@ -87,6 +97,10 @@ namespace Univer {
 		void InitializeComponent(void)
 		{
 			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
+			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->button2 = (gcnew System::Windows::Forms::Button());
+			this->button3 = (gcnew System::Windows::Forms::Button());
+			this->button4 = (gcnew System::Windows::Forms::Button());
 			this->Column1 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->Column2 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->Column3 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
@@ -96,10 +110,7 @@ namespace Univer {
 			this->Column7 = (gcnew System::Windows::Forms::DataGridViewCheckBoxColumn());
 			this->Column8 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->Column9 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->button1 = (gcnew System::Windows::Forms::Button());
-			this->button2 = (gcnew System::Windows::Forms::Button());
-			this->button3 = (gcnew System::Windows::Forms::Button());
-			this->button4 = (gcnew System::Windows::Forms::Button());
+			this->Column10 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->SuspendLayout();
 			// 
@@ -108,9 +119,9 @@ namespace Univer {
 			this->dataGridView1->BackgroundColor = System::Drawing::SystemColors::GradientActiveCaption;
 			this->dataGridView1->CellBorderStyle = System::Windows::Forms::DataGridViewCellBorderStyle::Raised;
 			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dataGridView1->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(9) {
+			this->dataGridView1->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(10) {
 				this->Column1,
-					this->Column2, this->Column3, this->Column4, this->Column5, this->Column6, this->Column7, this->Column8, this->Column9
+					this->Column2, this->Column3, this->Column4, this->Column5, this->Column6, this->Column7, this->Column8, this->Column9, this->Column10
 			});
 			this->dataGridView1->GridColor = System::Drawing::SystemColors::MenuHighlight;
 			this->dataGridView1->Location = System::Drawing::Point(-5, 46);
@@ -118,6 +129,51 @@ namespace Univer {
 			this->dataGridView1->Size = System::Drawing::Size(1272, 352);
 			this->dataGridView1->TabIndex = 0;
 			this->dataGridView1->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &MyForm1::dataGridView1_CellContentClick);
+			// 
+			// button1
+			// 
+			this->button1->Font = (gcnew System::Drawing::Font(L"Viner Hand ITC", 9.75F, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)),
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->button1->Location = System::Drawing::Point(372, 497);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(213, 51);
+			this->button1->TabIndex = 0;
+			this->button1->Text = L"Загрузить";
+			this->button1->UseVisualStyleBackColor = true;
+			this->button1->Click += gcnew System::EventHandler(this, &MyForm1::button1_Click);
+			// 
+			// button2
+			// 
+			this->button2->Font = (gcnew System::Drawing::Font(L"Viner Hand ITC", 9.75F, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)),
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->button2->Location = System::Drawing::Point(873, 429);
+			this->button2->Name = L"button2";
+			this->button2->Size = System::Drawing::Size(213, 51);
+			this->button2->TabIndex = 1;
+			this->button2->Text = L"Удалить";
+			this->button2->UseVisualStyleBackColor = true;
+			// 
+			// button3
+			// 
+			this->button3->Font = (gcnew System::Drawing::Font(L"Viner Hand ITC", 9.75F, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)),
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->button3->Location = System::Drawing::Point(873, 541);
+			this->button3->Name = L"button3";
+			this->button3->Size = System::Drawing::Size(213, 51);
+			this->button3->TabIndex = 2;
+			this->button3->Text = L"Добавить";
+			this->button3->UseVisualStyleBackColor = true;
+			// 
+			// button4
+			// 
+			this->button4->Font = (gcnew System::Drawing::Font(L"Viner Hand ITC", 9.75F, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)),
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->button4->Location = System::Drawing::Point(610, 497);
+			this->button4->Name = L"button4";
+			this->button4->Size = System::Drawing::Size(213, 51);
+			this->button4->TabIndex = 3;
+			this->button4->Text = L"Обновить";
+			this->button4->UseVisualStyleBackColor = true;
 			// 
 			// Column1
 			// 
@@ -173,50 +229,11 @@ namespace Univer {
 			this->Column9->HeaderText = L"Хронометраж";
 			this->Column9->Name = L"Column9";
 			// 
-			// button1
+			// Column10
 			// 
-			this->button1->Font = (gcnew System::Drawing::Font(L"Viner Hand ITC", 9.75F, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)),
-				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->button1->Location = System::Drawing::Point(362, 511);
-			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(213, 51);
-			this->button1->TabIndex = 0;
-			this->button1->Text = L"Загрузить";
-			this->button1->UseVisualStyleBackColor = true;
-			this->button1->Click += gcnew System::EventHandler(this, &MyForm1::button1_Click);
-			// 
-			// button2
-			// 
-			this->button2->Font = (gcnew System::Drawing::Font(L"Viner Hand ITC", 9.75F, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)),
-				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->button2->Location = System::Drawing::Point(873, 429);
-			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(213, 51);
-			this->button2->TabIndex = 1;
-			this->button2->Text = L"Удалить";
-			this->button2->UseVisualStyleBackColor = true;
-			// 
-			// button3
-			// 
-			this->button3->Font = (gcnew System::Drawing::Font(L"Viner Hand ITC", 9.75F, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)),
-				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->button3->Location = System::Drawing::Point(864, 545);
-			this->button3->Name = L"button3";
-			this->button3->Size = System::Drawing::Size(213, 51);
-			this->button3->TabIndex = 2;
-			this->button3->Text = L"Добавить";
-			this->button3->UseVisualStyleBackColor = true;
-			// 
-			// button4
-			// 
-			this->button4->Font = (gcnew System::Drawing::Font(L"Viner Hand ITC", 9.75F, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)),
-				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->button4->Location = System::Drawing::Point(610, 497);
-			this->button4->Name = L"button4";
-			this->button4->Size = System::Drawing::Size(213, 51);
-			this->button4->TabIndex = 3;
-			this->button4->Text = L"Обновить";
-			this->button4->UseVisualStyleBackColor = true;
+			this->Column10->HeaderText = L"Формат";
+			this->Column10->Name = L"Column10";
+			this->Column10->Resizable = System::Windows::Forms::DataGridViewTriState::True;
 			// 
 			// MyForm1
 			// 
@@ -244,6 +261,7 @@ namespace Univer {
 private: System::Void listBox1_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+
 }
 };
 }

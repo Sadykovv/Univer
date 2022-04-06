@@ -122,11 +122,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Excel.cpp" />
     <ClCompile Include="Functions.cpp" />
     <ClCompile Include="MyForm.cpp" />
     <ClCompile Include="MyForm1.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Excel.h" />
     <ClInclude Include="Functions.h" />
     <ClInclude Include="MyForm.h">
       <FileType>CppForm</FileType>

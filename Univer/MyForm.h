@@ -111,6 +111,7 @@ namespace Univer {
 			this->textBox_FIO->Name = L"textBox_FIO";
 			this->textBox_FIO->Size = System::Drawing::Size(100, 20);
 			this->textBox_FIO->TabIndex = 0;
+			this->textBox_FIO->Text = L"ФИО";
 			this->textBox_FIO->TextChanged += gcnew System::EventHandler(this, &MyForm::textBox_FIO_TextChanged);
 			// 
 			// textBox_Phone
@@ -119,14 +120,17 @@ namespace Univer {
 			this->textBox_Phone->Name = L"textBox_Phone";
 			this->textBox_Phone->Size = System::Drawing::Size(100, 20);
 			this->textBox_Phone->TabIndex = 1;
+			this->textBox_Phone->Text = L"8999999999";
 			this->textBox_Phone->TextChanged += gcnew System::EventHandler(this, &MyForm::textBox_Phone_TextChanged);
 			// 
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Location = System::Drawing::Point(273, 23);
+			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label1->Location = System::Drawing::Point(336, 9);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(44, 13);
+			this->label1->Size = System::Drawing::Size(62, 20);
 			this->label1->TabIndex = 2;
 			this->label1->Text = L"Форма";
 			this->label1->Click += gcnew System::EventHandler(this, &MyForm::label1_Click);
@@ -134,9 +138,11 @@ namespace Univer {
 			// label2
 			// 
 			this->label2->AutoSize = true;
-			this->label2->Location = System::Drawing::Point(126, 114);
+			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label2->Location = System::Drawing::Point(67, 111);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(93, 13);
+			this->label2->Size = System::Drawing::Size(142, 20);
 			this->label2->TabIndex = 3;
 			this->label2->Text = L"Номер телефона";
 			this->label2->Click += gcnew System::EventHandler(this, &MyForm::label2_Click);
@@ -144,9 +150,11 @@ namespace Univer {
 			// label3
 			// 
 			this->label3->AutoSize = true;
-			this->label3->Location = System::Drawing::Point(476, 71);
+			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label3->Location = System::Drawing::Point(406, 111);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(77, 13);
+			this->label3->Size = System::Drawing::Size(114, 20);
 			this->label3->TabIndex = 4;
 			this->label3->Text = L"Хронометраж";
 			this->label3->Click += gcnew System::EventHandler(this, &MyForm::label3_Click);
@@ -154,21 +162,25 @@ namespace Univer {
 			// label4
 			// 
 			this->label4->AutoSize = true;
+			this->label4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
 			this->label4->ForeColor = System::Drawing::SystemColors::ControlText;
-			this->label4->Location = System::Drawing::Point(322, 255);
+			this->label4->Location = System::Drawing::Point(307, 241);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(123, 13);
+			this->label4->Size = System::Drawing::Size(184, 20);
 			this->label4->TabIndex = 6;
 			this->label4->Text = L"Опишите идею съемки";
 			this->label4->Click += gcnew System::EventHandler(this, &MyForm::label4_Click);
 			// 
 			// richTextBox_ideaofvideo
 			// 
+			this->richTextBox_ideaofvideo->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(204)));
 			this->richTextBox_ideaofvideo->Location = System::Drawing::Point(497, 241);
 			this->richTextBox_ideaofvideo->Name = L"richTextBox_ideaofvideo";
-			this->richTextBox_ideaofvideo->Size = System::Drawing::Size(235, 29);
+			this->richTextBox_ideaofvideo->Size = System::Drawing::Size(235, 94);
 			this->richTextBox_ideaofvideo->TabIndex = 7;
-			this->richTextBox_ideaofvideo->Text = L"";
+			this->richTextBox_ideaofvideo->Text = L"Опишите идею видео\n";
 			this->richTextBox_ideaofvideo->TextChanged += gcnew System::EventHandler(this, &MyForm::richTextBox_ideaofvideo_TextChanged);
 			// 
 			// textBox_email
@@ -177,14 +189,17 @@ namespace Univer {
 			this->textBox_email->Name = L"textBox_email";
 			this->textBox_email->Size = System::Drawing::Size(100, 20);
 			this->textBox_email->TabIndex = 8;
+			this->textBox_email->Text = L"Почта";
 			this->textBox_email->TextChanged += gcnew System::EventHandler(this, &MyForm::textBox_email_TextChanged);
 			// 
 			// label5
 			// 
 			this->label5->AutoSize = true;
-			this->label5->Location = System::Drawing::Point(126, 167);
+			this->label5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label5->Location = System::Drawing::Point(67, 164);
 			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(104, 13);
+			this->label5->Size = System::Drawing::Size(160, 20);
 			this->label5->TabIndex = 9;
 			this->label5->Text = L"Электронная почта";
 			this->label5->Click += gcnew System::EventHandler(this, &MyForm::label5_Click);
@@ -192,9 +207,13 @@ namespace Univer {
 			// checkBox_interior
 			// 
 			this->checkBox_interior->CheckAlign = System::Drawing::ContentAlignment::MiddleRight;
-			this->checkBox_interior->Location = System::Drawing::Point(110, 225);
+			this->checkBox_interior->Checked = true;
+			this->checkBox_interior->CheckState = System::Windows::Forms::CheckState::Checked;
+			this->checkBox_interior->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->checkBox_interior->Location = System::Drawing::Point(71, 219);
 			this->checkBox_interior->Name = L"checkBox_interior";
-			this->checkBox_interior->Size = System::Drawing::Size(148, 24);
+			this->checkBox_interior->Size = System::Drawing::Size(197, 24);
 			this->checkBox_interior->TabIndex = 0;
 			this->checkBox_interior->Text = L"Доп интерьер";
 			this->checkBox_interior->UseVisualStyleBackColor = true;
@@ -203,7 +222,7 @@ namespace Univer {
 			// checkBox_4k
 			// 
 			this->checkBox_4k->CheckAlign = System::Drawing::ContentAlignment::MiddleRight;
-			this->checkBox_4k->Location = System::Drawing::Point(242, 255);
+			this->checkBox_4k->Location = System::Drawing::Point(252, 297);
 			this->checkBox_4k->Name = L"checkBox_4k";
 			this->checkBox_4k->Size = System::Drawing::Size(16, 24);
 			this->checkBox_4k->TabIndex = 10;
@@ -212,9 +231,11 @@ namespace Univer {
 			// 
 			// label6
 			// 
-			this->label6->Location = System::Drawing::Point(110, 260);
+			this->label6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label6->Location = System::Drawing::Point(67, 260);
 			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(126, 41);
+			this->label6->Size = System::Drawing::Size(158, 94);
 			this->label6->TabIndex = 11;
 			this->label6->Text = L"4K съемка (первоначально съмка производится в FullHD";
 			this->label6->Click += gcnew System::EventHandler(this, &MyForm::label6_Click);
@@ -222,9 +243,13 @@ namespace Univer {
 			// checkBox_airvideo
 			// 
 			this->checkBox_airvideo->CheckAlign = System::Drawing::ContentAlignment::MiddleRight;
-			this->checkBox_airvideo->Location = System::Drawing::Point(113, 313);
+			this->checkBox_airvideo->Checked = true;
+			this->checkBox_airvideo->CheckState = System::Windows::Forms::CheckState::Checked;
+			this->checkBox_airvideo->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->checkBox_airvideo->Location = System::Drawing::Point(65, 357);
 			this->checkBox_airvideo->Name = L"checkBox_airvideo";
-			this->checkBox_airvideo->Size = System::Drawing::Size(145, 24);
+			this->checkBox_airvideo->Size = System::Drawing::Size(203, 42);
 			this->checkBox_airvideo->TabIndex = 12;
 			this->checkBox_airvideo->Text = L"Съемка с воздуха";
 			this->checkBox_airvideo->UseVisualStyleBackColor = true;
@@ -232,10 +257,11 @@ namespace Univer {
 			// 
 			// textBox_timing
 			// 
-			this->textBox_timing->Location = System::Drawing::Point(589, 64);
+			this->textBox_timing->Location = System::Drawing::Point(529, 113);
 			this->textBox_timing->Name = L"textBox_timing";
-			this->textBox_timing->Size = System::Drawing::Size(100, 20);
+			this->textBox_timing->Size = System::Drawing::Size(121, 20);
 			this->textBox_timing->TabIndex = 13;
+			this->textBox_timing->Text = L"2 часа";
 			this->textBox_timing->TextChanged += gcnew System::EventHandler(this, &MyForm::textBox_timing_TextChanged);
 			// 
 			// comboBox_format
@@ -245,18 +271,21 @@ namespace Univer {
 				L"Праздничное", L"Корпоративное", L"Промо видео",
 					L"Другое"
 			});
-			this->comboBox_format->Location = System::Drawing::Point(589, 146);
+			this->comboBox_format->Location = System::Drawing::Point(529, 163);
 			this->comboBox_format->Name = L"comboBox_format";
 			this->comboBox_format->Size = System::Drawing::Size(121, 21);
 			this->comboBox_format->TabIndex = 15;
+			this->comboBox_format->Text = L"Праздничное";
 			this->comboBox_format->SelectedIndexChanged += gcnew System::EventHandler(this, &MyForm::comboBox_format_SelectedIndexChanged);
 			// 
 			// label7
 			// 
 			this->label7->AutoSize = true;
-			this->label7->Location = System::Drawing::Point(485, 149);
+			this->label7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label7->Location = System::Drawing::Point(406, 164);
 			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(49, 13);
+			this->label7->Size = System::Drawing::Size(71, 20);
 			this->label7->TabIndex = 16;
 			this->label7->Text = L"Формат";
 			this->label7->Click += gcnew System::EventHandler(this, &MyForm::label7_Click);
@@ -264,17 +293,21 @@ namespace Univer {
 			// label8
 			// 
 			this->label8->AutoSize = true;
-			this->label8->Location = System::Drawing::Point(142, 67);
+			this->label8->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label8->Location = System::Drawing::Point(67, 71);
 			this->label8->Name = L"label8";
-			this->label8->Size = System::Drawing::Size(34, 13);
+			this->label8->Size = System::Drawing::Size(47, 20);
 			this->label8->TabIndex = 17;
 			this->label8->Text = L"ФИО";
 			// 
 			// button_download
 			// 
-			this->button_download->Location = System::Drawing::Point(370, 395);
+			this->button_download->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->button_download->Location = System::Drawing::Point(497, 365);
 			this->button_download->Name = L"button_download";
-			this->button_download->Size = System::Drawing::Size(75, 23);
+			this->button_download->Size = System::Drawing::Size(120, 52);
 			this->button_download->TabIndex = 18;
 			this->button_download->Text = L"Отправить";
 			this->button_download->UseVisualStyleBackColor = true;
@@ -345,11 +378,13 @@ private: System::Void checkBox_airvideo_CheckedChanged(System::Object^ sender, S
 private: System::Void button_download_Click(System::Object^ sender, System::EventArgs^ e)
 {
 	Functions f;
-	f.Insert(textBox_FIO->Text, textBox_Phone->Text,
+	f.select();
+/*	f.Insert(textBox_FIO->Text, textBox_Phone->Text,
 		textBox_email->Text, textBox_timing->Text,
 		checkBox_interior->Checked,checkBox_4k->Checked,
 		checkBox_airvideo->Checked,comboBox_format->SelectedItem->ToString(),
 		richTextBox_ideaofvideo->Text);
+		*/
 }
 private: System::Void textBox_email_TextChanged(System::Object^ sender, System::EventArgs^ e)
 {}
