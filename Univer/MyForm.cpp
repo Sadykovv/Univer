@@ -10,4 +10,3 @@ void main(array<String^>^ arg) {
     Univer::MyForm form; 
     Application::Run(% form);
 }
-
