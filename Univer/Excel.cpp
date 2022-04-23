@@ -1,4 +1,5 @@
 #include "Excel.h"
+#include <ole2.h>
 
 Excel::Excel() {
     myfile.open("example.csv");
@@ -7,6 +8,7 @@ Excel::Excel() {
 
 void Excel::fillTable(int id, System::String^ fio)
 {
+   
     myfile << id << "\n";
    // myfile << conver_Unicode(fio);
     
