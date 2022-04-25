@@ -70,26 +70,35 @@ namespace Univer {
 	private: System::Windows::Forms::Label^ label7;
 	private: System::Windows::Forms::Label^ label8;
 	private: System::Windows::Forms::Button^ button_download;
-	private: System::Windows::Forms::TextBox^ textBox1;
+	private: System::Windows::Forms::TextBox^ textBox_type;
+
 	private: System::Windows::Forms::Label^ label9;
 	private: System::Windows::Forms::Label^ label10;
 	private: System::Windows::Forms::TextBox^ textBox_timing;
+	private: System::Windows::Forms::CheckBox^ checkBox_subtitles;
 
 
 
 
 
-	private: System::Windows::Forms::CheckBox^ checkBox1;
-	private: System::Windows::Forms::CheckBox^ checkBox2;
-	private: System::Windows::Forms::CheckBox^ checkBox3;
-	private: System::Windows::Forms::CheckBox^ checkBox4;
-	private: System::Windows::Forms::CheckBox^ checkBox5;
+
+	private: System::Windows::Forms::CheckBox^ checkBox_sign_lang_int;
+	private: System::Windows::Forms::CheckBox^ checkBox_color_corr;
+	private: System::Windows::Forms::CheckBox^ checkBox_localization;
+
+
+
+	private: System::Windows::Forms::CheckBox^ checkBox_music;
+
 	private: System::Windows::Forms::RichTextBox^ richTextBox_ideaofvideo;
 
 
 	private: System::Windows::Forms::Label^ label3;
-	private: System::Windows::Forms::TextBox^ textBox3;
-	private: System::Windows::Forms::TabControl^ MainData;
+	private: System::Windows::Forms::TextBox^ textBox_location_layout;
+
+
+	private: System::Windows::Forms::TabControl^ tabControl1;
+
 
 	private: System::Windows::Forms::TabPage^ tabPage1;
 	private: System::Windows::Forms::TabPage^ tabPage2;
@@ -99,7 +108,7 @@ namespace Univer {
 	private: System::Windows::Forms::Button^ button3;
 	private: System::Windows::Forms::Button^ button2;
 	private: System::Windows::Forms::Button^ button5;
-	private: System::Windows::Forms::Button^ button4;
+
 	private: System::Windows::Forms::CheckBox^ checkBox_4k;
 	private: System::Windows::Forms::SplitContainer^ splitContainer1;
 	private: System::Windows::Forms::SplitContainer^ splitContainer2;
@@ -137,43 +146,41 @@ namespace Univer {
 			this->label7 = (gcnew System::Windows::Forms::Label());
 			this->label8 = (gcnew System::Windows::Forms::Label());
 			this->button_download = (gcnew System::Windows::Forms::Button());
-			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox_type = (gcnew System::Windows::Forms::TextBox());
 			this->label9 = (gcnew System::Windows::Forms::Label());
 			this->label10 = (gcnew System::Windows::Forms::Label());
 			this->textBox_timing = (gcnew System::Windows::Forms::TextBox());
-			this->checkBox1 = (gcnew System::Windows::Forms::CheckBox());
-			this->checkBox2 = (gcnew System::Windows::Forms::CheckBox());
-			this->checkBox3 = (gcnew System::Windows::Forms::CheckBox());
-			this->checkBox4 = (gcnew System::Windows::Forms::CheckBox());
-			this->checkBox5 = (gcnew System::Windows::Forms::CheckBox());
+			this->checkBox_subtitles = (gcnew System::Windows::Forms::CheckBox());
+			this->checkBox_sign_lang_int = (gcnew System::Windows::Forms::CheckBox());
+			this->checkBox_color_corr = (gcnew System::Windows::Forms::CheckBox());
+			this->checkBox_localization = (gcnew System::Windows::Forms::CheckBox());
+			this->checkBox_music = (gcnew System::Windows::Forms::CheckBox());
 			this->richTextBox_ideaofvideo = (gcnew System::Windows::Forms::RichTextBox());
 			this->label3 = (gcnew System::Windows::Forms::Label());
-			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
-			this->MainData = (gcnew System::Windows::Forms::TabControl());
+			this->textBox_location_layout = (gcnew System::Windows::Forms::TextBox());
+			this->tabControl1 = (gcnew System::Windows::Forms::TabControl());
 			this->tabPage1 = (gcnew System::Windows::Forms::TabPage());
-			this->button5 = (gcnew System::Windows::Forms::Button());
-			this->button4 = (gcnew System::Windows::Forms::Button());
-			this->tabPage2 = (gcnew System::Windows::Forms::TabPage());
-			this->checkBox_4k = (gcnew System::Windows::Forms::CheckBox());
-			this->button3 = (gcnew System::Windows::Forms::Button());
-			this->button2 = (gcnew System::Windows::Forms::Button());
-			this->tabPage3 = (gcnew System::Windows::Forms::TabPage());
-			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->splitContainer1 = (gcnew System::Windows::Forms::SplitContainer());
+			this->button5 = (gcnew System::Windows::Forms::Button());
+			this->tabPage2 = (gcnew System::Windows::Forms::TabPage());
 			this->splitContainer2 = (gcnew System::Windows::Forms::SplitContainer());
+			this->button2 = (gcnew System::Windows::Forms::Button());
+			this->button3 = (gcnew System::Windows::Forms::Button());
+			this->checkBox_4k = (gcnew System::Windows::Forms::CheckBox());
+			this->tabPage3 = (gcnew System::Windows::Forms::TabPage());
 			this->splitContainer3 = (gcnew System::Windows::Forms::SplitContainer());
-			this->MainData->SuspendLayout();
+			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->tabControl1->SuspendLayout();
 			this->tabPage1->SuspendLayout();
-			this->tabPage2->SuspendLayout();
-			this->tabPage3->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->splitContainer1))->BeginInit();
-			this->splitContainer1->Panel1->SuspendLayout();
 			this->splitContainer1->Panel2->SuspendLayout();
 			this->splitContainer1->SuspendLayout();
+			this->tabPage2->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->splitContainer2))->BeginInit();
 			this->splitContainer2->Panel1->SuspendLayout();
 			this->splitContainer2->Panel2->SuspendLayout();
 			this->splitContainer2->SuspendLayout();
+			this->tabPage3->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->splitContainer3))->BeginInit();
 			this->splitContainer3->Panel1->SuspendLayout();
 			this->splitContainer3->Panel2->SuspendLayout();
@@ -189,7 +196,6 @@ namespace Univer {
 			this->textBox_FIO->Name = L"textBox_FIO";
 			this->textBox_FIO->Size = System::Drawing::Size(195, 26);
 			this->textBox_FIO->TabIndex = 0;
-			this->textBox_FIO->Text = L"ФИО";
 			this->textBox_FIO->TextChanged += gcnew System::EventHandler(this, &MyForm::textBox_FIO_TextChanged);
 			// 
 			// textBox_Phone
@@ -199,7 +205,6 @@ namespace Univer {
 			this->textBox_Phone->Name = L"textBox_Phone";
 			this->textBox_Phone->Size = System::Drawing::Size(195, 25);
 			this->textBox_Phone->TabIndex = 1;
-			this->textBox_Phone->Text = L"8999999999";
 			this->textBox_Phone->TextChanged += gcnew System::EventHandler(this, &MyForm::textBox_Phone_TextChanged);
 			// 
 			// label2
@@ -236,7 +241,6 @@ namespace Univer {
 			this->textBox_email->Name = L"textBox_email";
 			this->textBox_email->Size = System::Drawing::Size(195, 25);
 			this->textBox_email->TabIndex = 8;
-			this->textBox_email->Text = L"Почта";
 			this->textBox_email->TextChanged += gcnew System::EventHandler(this, &MyForm::textBox_email_TextChanged);
 			// 
 			// label5
@@ -255,8 +259,6 @@ namespace Univer {
 			// checkBox_interior
 			// 
 			this->checkBox_interior->CheckAlign = System::Drawing::ContentAlignment::MiddleRight;
-			this->checkBox_interior->Checked = true;
-			this->checkBox_interior->CheckState = System::Windows::Forms::CheckState::Checked;
 			this->checkBox_interior->Font = (gcnew System::Drawing::Font(L"Times New Roman", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->checkBox_interior->Location = System::Drawing::Point(328, 181);
@@ -271,14 +273,12 @@ namespace Univer {
 			// checkBox_airvideo
 			// 
 			this->checkBox_airvideo->CheckAlign = System::Drawing::ContentAlignment::MiddleRight;
-			this->checkBox_airvideo->Checked = true;
-			this->checkBox_airvideo->CheckState = System::Windows::Forms::CheckState::Checked;
 			this->checkBox_airvideo->Font = (gcnew System::Drawing::Font(L"Times New Roman", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->checkBox_airvideo->Location = System::Drawing::Point(328, 236);
 			this->checkBox_airvideo->Margin = System::Windows::Forms::Padding(4);
 			this->checkBox_airvideo->Name = L"checkBox_airvideo";
-			this->checkBox_airvideo->Size = System::Drawing::Size(270, 55);
+			this->checkBox_airvideo->Size = System::Drawing::Size(262, 55);
 			this->checkBox_airvideo->TabIndex = 12;
 			this->checkBox_airvideo->Text = L"Съемка с воздуха";
 			this->checkBox_airvideo->UseVisualStyleBackColor = true;
@@ -338,13 +338,13 @@ namespace Univer {
 			this->button_download->UseVisualStyleBackColor = true;
 			this->button_download->Click += gcnew System::EventHandler(this, &MyForm::button_download_Click);
 			// 
-			// textBox1
+			// textBox_type
 			// 
-			this->textBox1->Location = System::Drawing::Point(222, 24);
-			this->textBox1->Margin = System::Windows::Forms::Padding(4);
-			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(160, 25);
-			this->textBox1->TabIndex = 19;
+			this->textBox_type->Location = System::Drawing::Point(222, 24);
+			this->textBox_type->Margin = System::Windows::Forms::Padding(4);
+			this->textBox_type->Name = L"textBox_type";
+			this->textBox_type->Size = System::Drawing::Size(160, 25);
+			this->textBox_type->TabIndex = 19;
 			// 
 			// label9
 			// 
@@ -380,81 +380,71 @@ namespace Univer {
 			this->textBox_timing->Size = System::Drawing::Size(160, 25);
 			this->textBox_timing->TabIndex = 22;
 			// 
-			// checkBox1
+			// checkBox_subtitles
 			// 
-			this->checkBox1->CheckAlign = System::Drawing::ContentAlignment::MiddleRight;
-			this->checkBox1->Checked = true;
-			this->checkBox1->CheckState = System::Windows::Forms::CheckState::Checked;
-			this->checkBox1->Font = (gcnew System::Drawing::Font(L"Times New Roman", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->checkBox_subtitles->CheckAlign = System::Drawing::ContentAlignment::MiddleRight;
+			this->checkBox_subtitles->Font = (gcnew System::Drawing::Font(L"Times New Roman", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->checkBox1->Location = System::Drawing::Point(22, 169);
-			this->checkBox1->Margin = System::Windows::Forms::Padding(4);
-			this->checkBox1->Name = L"checkBox1";
-			this->checkBox1->Size = System::Drawing::Size(262, 55);
-			this->checkBox1->TabIndex = 27;
-			this->checkBox1->Text = L"Субтитры";
-			this->checkBox1->UseVisualStyleBackColor = true;
+			this->checkBox_subtitles->Location = System::Drawing::Point(22, 169);
+			this->checkBox_subtitles->Margin = System::Windows::Forms::Padding(4);
+			this->checkBox_subtitles->Name = L"checkBox_subtitles";
+			this->checkBox_subtitles->Size = System::Drawing::Size(262, 55);
+			this->checkBox_subtitles->TabIndex = 27;
+			this->checkBox_subtitles->Text = L"Субтитры";
+			this->checkBox_subtitles->UseVisualStyleBackColor = true;
 			// 
-			// checkBox2
+			// checkBox_sign_lang_int
 			// 
-			this->checkBox2->CheckAlign = System::Drawing::ContentAlignment::MiddleRight;
-			this->checkBox2->Checked = true;
-			this->checkBox2->CheckState = System::Windows::Forms::CheckState::Checked;
-			this->checkBox2->Font = (gcnew System::Drawing::Font(L"Times New Roman", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->checkBox_sign_lang_int->CheckAlign = System::Drawing::ContentAlignment::MiddleRight;
+			this->checkBox_sign_lang_int->Font = (gcnew System::Drawing::Font(L"Times New Roman", 14.25F, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(204)));
+			this->checkBox_sign_lang_int->Location = System::Drawing::Point(22, 26);
+			this->checkBox_sign_lang_int->Margin = System::Windows::Forms::Padding(4);
+			this->checkBox_sign_lang_int->Name = L"checkBox_sign_lang_int";
+			this->checkBox_sign_lang_int->Size = System::Drawing::Size(262, 55);
+			this->checkBox_sign_lang_int->TabIndex = 28;
+			this->checkBox_sign_lang_int->Text = L"Сурдопереводчик";
+			this->checkBox_sign_lang_int->UseVisualStyleBackColor = true;
+			this->checkBox_sign_lang_int->CheckedChanged += gcnew System::EventHandler(this, &MyForm::checkBox2_CheckedChanged);
+			// 
+			// checkBox_color_corr
+			// 
+			this->checkBox_color_corr->CheckAlign = System::Drawing::ContentAlignment::MiddleRight;
+			this->checkBox_color_corr->Font = (gcnew System::Drawing::Font(L"Times New Roman", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->checkBox2->Location = System::Drawing::Point(22, 26);
-			this->checkBox2->Margin = System::Windows::Forms::Padding(4);
-			this->checkBox2->Name = L"checkBox2";
-			this->checkBox2->Size = System::Drawing::Size(262, 55);
-			this->checkBox2->TabIndex = 28;
-			this->checkBox2->Text = L"Сурдопереводчик";
-			this->checkBox2->UseVisualStyleBackColor = true;
-			this->checkBox2->CheckedChanged += gcnew System::EventHandler(this, &MyForm::checkBox2_CheckedChanged);
+			this->checkBox_color_corr->Location = System::Drawing::Point(22, 106);
+			this->checkBox_color_corr->Margin = System::Windows::Forms::Padding(4);
+			this->checkBox_color_corr->Name = L"checkBox_color_corr";
+			this->checkBox_color_corr->Size = System::Drawing::Size(262, 55);
+			this->checkBox_color_corr->TabIndex = 29;
+			this->checkBox_color_corr->Text = L"Цветокор";
+			this->checkBox_color_corr->UseVisualStyleBackColor = true;
 			// 
-			// checkBox3
+			// checkBox_localization
 			// 
-			this->checkBox3->CheckAlign = System::Drawing::ContentAlignment::MiddleRight;
-			this->checkBox3->Checked = true;
-			this->checkBox3->CheckState = System::Windows::Forms::CheckState::Checked;
-			this->checkBox3->Font = (gcnew System::Drawing::Font(L"Times New Roman", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->checkBox_localization->CheckAlign = System::Drawing::ContentAlignment::MiddleRight;
+			this->checkBox_localization->Font = (gcnew System::Drawing::Font(L"Times New Roman", 14.25F, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(204)));
+			this->checkBox_localization->Location = System::Drawing::Point(328, 106);
+			this->checkBox_localization->Margin = System::Windows::Forms::Padding(4);
+			this->checkBox_localization->Name = L"checkBox_localization";
+			this->checkBox_localization->Size = System::Drawing::Size(262, 55);
+			this->checkBox_localization->TabIndex = 30;
+			this->checkBox_localization->Text = L"Переозвучка(дубляж)";
+			this->checkBox_localization->UseVisualStyleBackColor = true;
+			// 
+			// checkBox_music
+			// 
+			this->checkBox_music->CheckAlign = System::Drawing::ContentAlignment::MiddleRight;
+			this->checkBox_music->Font = (gcnew System::Drawing::Font(L"Times New Roman", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->checkBox3->Location = System::Drawing::Point(22, 106);
-			this->checkBox3->Margin = System::Windows::Forms::Padding(4);
-			this->checkBox3->Name = L"checkBox3";
-			this->checkBox3->Size = System::Drawing::Size(262, 55);
-			this->checkBox3->TabIndex = 29;
-			this->checkBox3->Text = L"Цветокор";
-			this->checkBox3->UseVisualStyleBackColor = true;
-			// 
-			// checkBox4
-			// 
-			this->checkBox4->CheckAlign = System::Drawing::ContentAlignment::MiddleRight;
-			this->checkBox4->Checked = true;
-			this->checkBox4->CheckState = System::Windows::Forms::CheckState::Checked;
-			this->checkBox4->Font = (gcnew System::Drawing::Font(L"Times New Roman", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(204)));
-			this->checkBox4->Location = System::Drawing::Point(328, 106);
-			this->checkBox4->Margin = System::Windows::Forms::Padding(4);
-			this->checkBox4->Name = L"checkBox4";
-			this->checkBox4->Size = System::Drawing::Size(262, 55);
-			this->checkBox4->TabIndex = 30;
-			this->checkBox4->Text = L"Переозвучка(дубляж)";
-			this->checkBox4->UseVisualStyleBackColor = true;
-			// 
-			// checkBox5
-			// 
-			this->checkBox5->CheckAlign = System::Drawing::ContentAlignment::MiddleRight;
-			this->checkBox5->Checked = true;
-			this->checkBox5->CheckState = System::Windows::Forms::CheckState::Checked;
-			this->checkBox5->Font = (gcnew System::Drawing::Font(L"Times New Roman", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(204)));
-			this->checkBox5->Location = System::Drawing::Point(328, 26);
-			this->checkBox5->Margin = System::Windows::Forms::Padding(4);
-			this->checkBox5->Name = L"checkBox5";
-			this->checkBox5->Size = System::Drawing::Size(262, 82);
-			this->checkBox5->TabIndex = 31;
-			this->checkBox5->Text = L"Музыкальное сопровождение";
-			this->checkBox5->UseVisualStyleBackColor = true;
+			this->checkBox_music->Location = System::Drawing::Point(328, 26);
+			this->checkBox_music->Margin = System::Windows::Forms::Padding(4);
+			this->checkBox_music->Name = L"checkBox_music";
+			this->checkBox_music->Size = System::Drawing::Size(262, 82);
+			this->checkBox_music->TabIndex = 31;
+			this->checkBox_music->Text = L"Музыкальное сопровождение";
+			this->checkBox_music->UseVisualStyleBackColor = true;
 			// 
 			// richTextBox_ideaofvideo
 			// 
@@ -465,7 +455,7 @@ namespace Univer {
 			this->richTextBox_ideaofvideo->Name = L"richTextBox_ideaofvideo";
 			this->richTextBox_ideaofvideo->Size = System::Drawing::Size(312, 121);
 			this->richTextBox_ideaofvideo->TabIndex = 32;
-			this->richTextBox_ideaofvideo->Text = L"Опишите идею видео\n";
+			this->richTextBox_ideaofvideo->Text = L"";
 			// 
 			// label3
 			// 
@@ -480,27 +470,27 @@ namespace Univer {
 			this->label3->Text = L"Макет локации";
 			this->label3->Click += gcnew System::EventHandler(this, &MyForm::label3_Click);
 			// 
-			// textBox3
+			// textBox_location_layout
 			// 
-			this->textBox3->Location = System::Drawing::Point(22, 298);
-			this->textBox3->Margin = System::Windows::Forms::Padding(4);
-			this->textBox3->Name = L"textBox3";
-			this->textBox3->Size = System::Drawing::Size(295, 25);
-			this->textBox3->TabIndex = 35;
-			this->textBox3->TextChanged += gcnew System::EventHandler(this, &MyForm::textBox3_TextChanged);
+			this->textBox_location_layout->Location = System::Drawing::Point(22, 298);
+			this->textBox_location_layout->Margin = System::Windows::Forms::Padding(4);
+			this->textBox_location_layout->Name = L"textBox_location_layout";
+			this->textBox_location_layout->Size = System::Drawing::Size(295, 25);
+			this->textBox_location_layout->TabIndex = 35;
+			this->textBox_location_layout->TextChanged += gcnew System::EventHandler(this, &MyForm::textBox3_TextChanged);
 			// 
-			// MainData
+			// tabControl1
 			// 
-			this->MainData->Controls->Add(this->tabPage1);
-			this->MainData->Controls->Add(this->tabPage2);
-			this->MainData->Controls->Add(this->tabPage3);
-			this->MainData->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->MainData->Location = System::Drawing::Point(0, 0);
-			this->MainData->Margin = System::Windows::Forms::Padding(0);
-			this->MainData->Name = L"MainData";
-			this->MainData->SelectedIndex = 0;
-			this->MainData->Size = System::Drawing::Size(818, 629);
-			this->MainData->TabIndex = 36;
+			this->tabControl1->Controls->Add(this->tabPage1);
+			this->tabControl1->Controls->Add(this->tabPage2);
+			this->tabControl1->Controls->Add(this->tabPage3);
+			this->tabControl1->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->tabControl1->Location = System::Drawing::Point(0, 0);
+			this->tabControl1->Margin = System::Windows::Forms::Padding(0);
+			this->tabControl1->Name = L"tabControl1";
+			this->tabControl1->SelectedIndex = 0;
+			this->tabControl1->Size = System::Drawing::Size(818, 629);
+			this->tabControl1->TabIndex = 36;
 			// 
 			// tabPage1
 			// 
@@ -521,6 +511,19 @@ namespace Univer {
 			this->tabPage1->TabIndex = 0;
 			this->tabPage1->Text = L"Данные для связи";
 			// 
+			// splitContainer1
+			// 
+			this->splitContainer1->Dock = System::Windows::Forms::DockStyle::Bottom;
+			this->splitContainer1->Location = System::Drawing::Point(3, 492);
+			this->splitContainer1->Name = L"splitContainer1";
+			// 
+			// splitContainer1.Panel2
+			// 
+			this->splitContainer1->Panel2->Controls->Add(this->button5);
+			this->splitContainer1->Size = System::Drawing::Size(800, 100);
+			this->splitContainer1->SplitterDistance = 266;
+			this->splitContainer1->TabIndex = 39;
+			// 
 			// button5
 			// 
 			this->button5->Location = System::Drawing::Point(366, 36);
@@ -531,17 +534,6 @@ namespace Univer {
 			this->button5->UseVisualStyleBackColor = true;
 			this->button5->Click += gcnew System::EventHandler(this, &MyForm::button5_Click);
 			// 
-			// button4
-			// 
-			this->button4->Location = System::Drawing::Point(23, 36);
-			this->button4->Margin = System::Windows::Forms::Padding(15);
-			this->button4->Name = L"button4";
-			this->button4->Size = System::Drawing::Size(113, 37);
-			this->button4->TabIndex = 37;
-			this->button4->Text = L"Назад";
-			this->button4->UseVisualStyleBackColor = true;
-			this->button4->Click += gcnew System::EventHandler(this, &MyForm::button4_Click);
-			// 
 			// tabPage2
 			// 
 			this->tabPage2->BackColor = System::Drawing::SystemColors::ActiveCaption;
@@ -551,7 +543,7 @@ namespace Univer {
 			this->tabPage2->Controls->Add(this->textBox_timing);
 			this->tabPage2->Controls->Add(this->label9);
 			this->tabPage2->Controls->Add(this->label4);
-			this->tabPage2->Controls->Add(this->textBox1);
+			this->tabPage2->Controls->Add(this->textBox_type);
 			this->tabPage2->Controls->Add(this->label10);
 			this->tabPage2->Controls->Add(this->label7);
 			this->tabPage2->Controls->Add(this->comboBox_format);
@@ -561,89 +553,6 @@ namespace Univer {
 			this->tabPage2->Size = System::Drawing::Size(810, 599);
 			this->tabPage2->TabIndex = 1;
 			this->tabPage2->Text = L"О видео";
-			// 
-			// checkBox_4k
-			// 
-			this->checkBox_4k->CheckAlign = System::Drawing::ContentAlignment::MiddleRight;
-			this->checkBox_4k->Checked = true;
-			this->checkBox_4k->CheckState = System::Windows::Forms::CheckState::Checked;
-			this->checkBox_4k->Font = (gcnew System::Drawing::Font(L"Times New Roman", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(204)));
-			this->checkBox_4k->Location = System::Drawing::Point(26, 191);
-			this->checkBox_4k->Margin = System::Windows::Forms::Padding(4);
-			this->checkBox_4k->Name = L"checkBox_4k";
-			this->checkBox_4k->Size = System::Drawing::Size(262, 82);
-			this->checkBox_4k->TabIndex = 40;
-			this->checkBox_4k->Text = L"4K съемка (первоначально съмка производится в FullHD";
-			this->checkBox_4k->UseVisualStyleBackColor = true;
-			this->checkBox_4k->CheckedChanged += gcnew System::EventHandler(this, &MyForm::checkBox_4k_CheckedChanged_1);
-			// 
-			// button3
-			// 
-			this->button3->Location = System::Drawing::Point(366, 36);
-			this->button3->Name = L"button3";
-			this->button3->Size = System::Drawing::Size(145, 37);
-			this->button3->TabIndex = 39;
-			this->button3->Text = L"Далее";
-			this->button3->UseVisualStyleBackColor = true;
-			this->button3->Click += gcnew System::EventHandler(this, &MyForm::button3_Click);
-			// 
-			// button2
-			// 
-			this->button2->Location = System::Drawing::Point(23, 36);
-			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(113, 37);
-			this->button2->TabIndex = 38;
-			this->button2->Text = L"Назад";
-			this->button2->UseVisualStyleBackColor = true;
-			this->button2->Click += gcnew System::EventHandler(this, &MyForm::button2_Click);
-			// 
-			// tabPage3
-			// 
-			this->tabPage3->BackColor = System::Drawing::SystemColors::ActiveCaption;
-			this->tabPage3->Controls->Add(this->splitContainer3);
-			this->tabPage3->Controls->Add(this->label3);
-			this->tabPage3->Controls->Add(this->textBox3);
-			this->tabPage3->Controls->Add(this->checkBox5);
-			this->tabPage3->Controls->Add(this->checkBox_airvideo);
-			this->tabPage3->Controls->Add(this->checkBox1);
-			this->tabPage3->Controls->Add(this->checkBox2);
-			this->tabPage3->Controls->Add(this->checkBox4);
-			this->tabPage3->Controls->Add(this->checkBox_interior);
-			this->tabPage3->Controls->Add(this->checkBox3);
-			this->tabPage3->Location = System::Drawing::Point(4, 26);
-			this->tabPage3->Name = L"tabPage3";
-			this->tabPage3->Padding = System::Windows::Forms::Padding(3);
-			this->tabPage3->Size = System::Drawing::Size(810, 599);
-			this->tabPage3->TabIndex = 2;
-			this->tabPage3->Text = L"Дополнительно";
-			// 
-			// button1
-			// 
-			this->button1->Location = System::Drawing::Point(23, 36);
-			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(113, 37);
-			this->button1->TabIndex = 36;
-			this->button1->Text = L"Назад";
-			this->button1->UseVisualStyleBackColor = true;
-			this->button1->Click += gcnew System::EventHandler(this, &MyForm::button1_Click);
-			// 
-			// splitContainer1
-			// 
-			this->splitContainer1->Dock = System::Windows::Forms::DockStyle::Bottom;
-			this->splitContainer1->Location = System::Drawing::Point(3, 492);
-			this->splitContainer1->Name = L"splitContainer1";
-			// 
-			// splitContainer1.Panel1
-			// 
-			this->splitContainer1->Panel1->Controls->Add(this->button4);
-			// 
-			// splitContainer1.Panel2
-			// 
-			this->splitContainer1->Panel2->Controls->Add(this->button5);
-			this->splitContainer1->Size = System::Drawing::Size(800, 100);
-			this->splitContainer1->SplitterDistance = 266;
-			this->splitContainer1->TabIndex = 39;
 			// 
 			// splitContainer2
 			// 
@@ -662,6 +571,60 @@ namespace Univer {
 			this->splitContainer2->SplitterDistance = 267;
 			this->splitContainer2->TabIndex = 41;
 			// 
+			// button2
+			// 
+			this->button2->Location = System::Drawing::Point(23, 36);
+			this->button2->Name = L"button2";
+			this->button2->Size = System::Drawing::Size(113, 37);
+			this->button2->TabIndex = 38;
+			this->button2->Text = L"Назад";
+			this->button2->UseVisualStyleBackColor = true;
+			this->button2->Click += gcnew System::EventHandler(this, &MyForm::button2_Click);
+			// 
+			// button3
+			// 
+			this->button3->Location = System::Drawing::Point(366, 36);
+			this->button3->Name = L"button3";
+			this->button3->Size = System::Drawing::Size(145, 37);
+			this->button3->TabIndex = 39;
+			this->button3->Text = L"Далее";
+			this->button3->UseVisualStyleBackColor = true;
+			this->button3->Click += gcnew System::EventHandler(this, &MyForm::button3_Click);
+			// 
+			// checkBox_4k
+			// 
+			this->checkBox_4k->CheckAlign = System::Drawing::ContentAlignment::MiddleRight;
+			this->checkBox_4k->Font = (gcnew System::Drawing::Font(L"Times New Roman", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->checkBox_4k->Location = System::Drawing::Point(26, 191);
+			this->checkBox_4k->Margin = System::Windows::Forms::Padding(4);
+			this->checkBox_4k->Name = L"checkBox_4k";
+			this->checkBox_4k->Size = System::Drawing::Size(262, 82);
+			this->checkBox_4k->TabIndex = 40;
+			this->checkBox_4k->Text = L"4K съемка (первоначально съмка производится в FullHD";
+			this->checkBox_4k->UseVisualStyleBackColor = true;
+			this->checkBox_4k->CheckedChanged += gcnew System::EventHandler(this, &MyForm::checkBox_4k_CheckedChanged_1);
+			// 
+			// tabPage3
+			// 
+			this->tabPage3->BackColor = System::Drawing::SystemColors::ActiveCaption;
+			this->tabPage3->Controls->Add(this->splitContainer3);
+			this->tabPage3->Controls->Add(this->label3);
+			this->tabPage3->Controls->Add(this->textBox_location_layout);
+			this->tabPage3->Controls->Add(this->checkBox_music);
+			this->tabPage3->Controls->Add(this->checkBox_airvideo);
+			this->tabPage3->Controls->Add(this->checkBox_subtitles);
+			this->tabPage3->Controls->Add(this->checkBox_sign_lang_int);
+			this->tabPage3->Controls->Add(this->checkBox_localization);
+			this->tabPage3->Controls->Add(this->checkBox_interior);
+			this->tabPage3->Controls->Add(this->checkBox_color_corr);
+			this->tabPage3->Location = System::Drawing::Point(4, 26);
+			this->tabPage3->Name = L"tabPage3";
+			this->tabPage3->Padding = System::Windows::Forms::Padding(3);
+			this->tabPage3->Size = System::Drawing::Size(810, 599);
+			this->tabPage3->TabIndex = 2;
+			this->tabPage3->Text = L"Дополнительно";
+			// 
 			// splitContainer3
 			// 
 			this->splitContainer3->Dock = System::Windows::Forms::DockStyle::Bottom;
@@ -679,13 +642,23 @@ namespace Univer {
 			this->splitContainer3->SplitterDistance = 267;
 			this->splitContainer3->TabIndex = 42;
 			// 
+			// button1
+			// 
+			this->button1->Location = System::Drawing::Point(23, 36);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(113, 37);
+			this->button1->TabIndex = 36;
+			this->button1->Text = L"Назад";
+			this->button1->UseVisualStyleBackColor = true;
+			this->button1->Click += gcnew System::EventHandler(this, &MyForm::button1_Click);
+			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 17);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::ButtonHighlight;
 			this->ClientSize = System::Drawing::Size(818, 629);
-			this->Controls->Add(this->MainData);
+			this->Controls->Add(this->tabControl1);
 			this->Font = (gcnew System::Drawing::Font(L"Times New Roman", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->Margin = System::Windows::Forms::Padding(4);
@@ -693,21 +666,20 @@ namespace Univer {
 			this->Name = L"MyForm";
 			this->Text = L"Форма";
 			this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
-			this->MainData->ResumeLayout(false);
+			this->tabControl1->ResumeLayout(false);
 			this->tabPage1->ResumeLayout(false);
 			this->tabPage1->PerformLayout();
-			this->tabPage2->ResumeLayout(false);
-			this->tabPage2->PerformLayout();
-			this->tabPage3->ResumeLayout(false);
-			this->tabPage3->PerformLayout();
-			this->splitContainer1->Panel1->ResumeLayout(false);
 			this->splitContainer1->Panel2->ResumeLayout(false);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->splitContainer1))->EndInit();
 			this->splitContainer1->ResumeLayout(false);
+			this->tabPage2->ResumeLayout(false);
+			this->tabPage2->PerformLayout();
 			this->splitContainer2->Panel1->ResumeLayout(false);
 			this->splitContainer2->Panel2->ResumeLayout(false);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->splitContainer2))->EndInit();
 			this->splitContainer2->ResumeLayout(false);
+			this->tabPage3->ResumeLayout(false);
+			this->tabPage3->PerformLayout();
 			this->splitContainer3->Panel1->ResumeLayout(false);
 			this->splitContainer3->Panel2->ResumeLayout(false);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->splitContainer3))->EndInit();
@@ -735,12 +707,13 @@ private: System::Void checkBox_airvideo_CheckedChanged(System::Object^ sender, S
 private: System::Void button_download_Click(System::Object^ sender, System::EventArgs^ e)
 {
 	Functions f;
-	f.select();
 	f.Insert(textBox_FIO->Text, textBox_Phone->Text,
 		textBox_email->Text, textBox_timing->Text,
 		checkBox_interior->Checked,checkBox_4k->Checked,
 		checkBox_airvideo->Checked,comboBox_format->SelectedItem->ToString(),
-		richTextBox_ideaofvideo->Text);
+		richTextBox_ideaofvideo->Text,textBox_type->Text,checkBox_sign_lang_int->Checked,
+		checkBox_color_corr->Checked, checkBox_subtitles->Checked, checkBox_music->Checked,
+		checkBox_localization->Checked, textBox_location_layout->Text);
 		
 }
 private: System::Void textBox_email_TextChanged(System::Object^ sender, System::EventArgs^ e)
@@ -772,14 +745,18 @@ private: System::Void textBox3_TextChanged(System::Object^ sender, System::Event
 }
 
 private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+	tabControl1->SelectedTab = tabPage2;
 }
 private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
+	tabControl1->SelectedTab = tabPage3;
 }
 private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
+	tabControl1->SelectedTab = tabPage1;
 }
 private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e) {
+	tabControl1->SelectedTab = tabPage2;
 }
 
 private: System::Void checkBox_4k_CheckedChanged_1(System::Object^ sender, System::EventArgs^ e) {

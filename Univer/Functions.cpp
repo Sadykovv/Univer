@@ -11,22 +11,26 @@ void Functions::ConnectToDB()
 {
 	//Data Source=DESKTOP-887PGVF;Initial Catalog=TestDb;Integrated Security=True
 	connStrinfBuilder = gcnew SqlConnectionStringBuilder();
-	connStrinfBuilder->DataSource = "DESKTOP-887PGVF";
-	connStrinfBuilder->InitialCatalog = "TestDb";
+	connStrinfBuilder->DataSource = "DESKTOP-UGB9IJG";
+	connStrinfBuilder->InitialCatalog = "Test";
 	connStrinfBuilder->IntegratedSecurity = true;
 
 	conn = gcnew SqlConnection(Convert::ToString(connStrinfBuilder));
 
 }
-void Functions::Insert(String^ FIO, String^ PhoneNumber, String^ Email, String^ Timing, bool Interior, bool Video4k, bool Airvideo, String^ Format, String^ Ideaofvideo)
+void Functions::Insert(String^ FIO, String^ PhoneNumber, String^ Email, String^ Timing, bool Interior, bool Video4k, 
+	bool Airvideo, String^ Format, String^ Ideaofvideo, String^ videoType, bool signLangInt, bool colorCorr, bool subtitles,
+	bool music, bool localization, String^ locationLayout)
 {
 	try
 	{
 		ConnectToDB();
 		String^ cmdText = "INSERT INTO dbo.Table_1(FIO, PhoneNumber,"
-			"Email, Timing, Interior, Video4k, Airvideo, Format, Ideaofvideo)"
+			"Email, Timing, Interior, Video4k, Airvideo, Format, Ideaofvideo, videoType, signLangInt,"
+			"colorCorr, subtitles, music, localization, locationLayout)"
 			"VALUES(@FIOVstavka, @PhoneNumberVstavka, @EmailVstavka, @TimingVstavka,"
-			"@InteriorVstavka, @Video4kVstavka, @AirvideoVstavka, @FormatVstavka,@IdeaofvideoVstavka)";
+			"@InteriorVstavka, @Video4kVstavka, @AirvideoVstavka, @FormatVstavka,@IdeaofvideoVstavka,"
+			"@videoType,  @signLangInt, @colorCorr, @subtitles, @music, @localization, @locationLayout)";
 		SqlCommand^ cmd = gcnew SqlCommand(cmdText, conn);
 
 		cmd->Parameters->AddWithValue("@FIOVstavka", FIO);
@@ -38,6 +42,14 @@ void Functions::Insert(String^ FIO, String^ PhoneNumber, String^ Email, String^ 
 		cmd->Parameters->AddWithValue("@AirvideoVstavka", Airvideo);
 		cmd->Parameters->AddWithValue("@FormatVstavka", Format);
 		cmd->Parameters->AddWithValue("@IdeaofvideoVstavka", Ideaofvideo);
+
+		cmd->Parameters->AddWithValue("@videoType", videoType);
+		cmd->Parameters->AddWithValue("@signLangInt", signLangInt);
+		cmd->Parameters->AddWithValue("@colorCorr", colorCorr);
+		cmd->Parameters->AddWithValue("@subtitles", subtitles);
+		cmd->Parameters->AddWithValue("@music", music);
+		cmd->Parameters->AddWithValue("@localization", localization);
+		cmd->Parameters->AddWithValue("@locationLayout", locationLayout);
 
 		conn->Open();
 		cmd->ExecuteNonQuery();
@@ -51,7 +63,7 @@ void Functions::Insert(String^ FIO, String^ PhoneNumber, String^ Email, String^ 
 
 	}
 }
-
+//Excel
 void Functions::select()
 {
 	try {
