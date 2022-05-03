@@ -24,7 +24,6 @@ namespace Univer {
 
 			ToolTip^ timming = gcnew ToolTip();
 			timming->SetToolTip(label10, "Формат чч:мм:сс");
-
 		}
 
 	protected:
@@ -70,9 +69,9 @@ namespace Univer {
 	private: System::Windows::Forms::Label^ label7;
 	private: System::Windows::Forms::Label^ label8;
 	private: System::Windows::Forms::Button^ button_download;
-	private: System::Windows::Forms::TextBox^ textBox_type;
 
-	private: System::Windows::Forms::Label^ label9;
+
+
 	private: System::Windows::Forms::Label^ label10;
 	private: System::Windows::Forms::TextBox^ textBox_timing;
 	private: System::Windows::Forms::CheckBox^ checkBox_subtitles;
@@ -146,8 +145,6 @@ namespace Univer {
 			this->label7 = (gcnew System::Windows::Forms::Label());
 			this->label8 = (gcnew System::Windows::Forms::Label());
 			this->button_download = (gcnew System::Windows::Forms::Button());
-			this->textBox_type = (gcnew System::Windows::Forms::TextBox());
-			this->label9 = (gcnew System::Windows::Forms::Label());
 			this->label10 = (gcnew System::Windows::Forms::Label());
 			this->textBox_timing = (gcnew System::Windows::Forms::TextBox());
 			this->checkBox_subtitles = (gcnew System::Windows::Forms::CheckBox());
@@ -266,7 +263,7 @@ namespace Univer {
 			this->checkBox_interior->Name = L"checkBox_interior";
 			this->checkBox_interior->Size = System::Drawing::Size(262, 31);
 			this->checkBox_interior->TabIndex = 0;
-			this->checkBox_interior->Text = L"Доп интерьер";
+			this->checkBox_interior->Text = L"Свой интерьер";
 			this->checkBox_interior->UseVisualStyleBackColor = true;
 			this->checkBox_interior->CheckedChanged += gcnew System::EventHandler(this, &MyForm::checkBox_interior_CheckedChanged);
 			// 
@@ -317,6 +314,7 @@ namespace Univer {
 			this->label8->AutoSize = true;
 			this->label8->Font = (gcnew System::Drawing::Font(L"Times New Roman", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
+			this->label8->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->label8->Location = System::Drawing::Point(22, 26);
 			this->label8->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label8->Name = L"label8";
@@ -338,33 +336,12 @@ namespace Univer {
 			this->button_download->UseVisualStyleBackColor = true;
 			this->button_download->Click += gcnew System::EventHandler(this, &MyForm::button_download_Click);
 			// 
-			// textBox_type
-			// 
-			this->textBox_type->Location = System::Drawing::Point(222, 24);
-			this->textBox_type->Margin = System::Windows::Forms::Padding(4);
-			this->textBox_type->Name = L"textBox_type";
-			this->textBox_type->Size = System::Drawing::Size(160, 25);
-			this->textBox_type->TabIndex = 19;
-			// 
-			// label9
-			// 
-			this->label9->AutoSize = true;
-			this->label9->Font = (gcnew System::Drawing::Font(L"Times New Roman", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(204)));
-			this->label9->Location = System::Drawing::Point(22, 26);
-			this->label9->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
-			this->label9->Name = L"label9";
-			this->label9->Size = System::Drawing::Size(94, 21);
-			this->label9->TabIndex = 20;
-			this->label9->Text = L"Тип видео";
-			this->label9->Click += gcnew System::EventHandler(this, &MyForm::label9_Click);
-			// 
 			// label10
 			// 
 			this->label10->AutoSize = true;
 			this->label10->Font = (gcnew System::Drawing::Font(L"Times New Roman", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label10->Location = System::Drawing::Point(22, 80);
+			this->label10->Location = System::Drawing::Point(17, 48);
 			this->label10->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label10->Name = L"label10";
 			this->label10->Size = System::Drawing::Size(122, 21);
@@ -374,11 +351,12 @@ namespace Univer {
 			// 
 			// textBox_timing
 			// 
-			this->textBox_timing->Location = System::Drawing::Point(222, 76);
+			this->textBox_timing->Location = System::Drawing::Point(222, 48);
 			this->textBox_timing->Margin = System::Windows::Forms::Padding(4);
 			this->textBox_timing->Name = L"textBox_timing";
 			this->textBox_timing->Size = System::Drawing::Size(160, 25);
 			this->textBox_timing->TabIndex = 22;
+			this->textBox_timing->TextChanged += gcnew System::EventHandler(this, &MyForm::textBox_timing_TextChanged_1);
 			// 
 			// checkBox_subtitles
 			// 
@@ -430,7 +408,7 @@ namespace Univer {
 			this->checkBox_localization->Name = L"checkBox_localization";
 			this->checkBox_localization->Size = System::Drawing::Size(262, 55);
 			this->checkBox_localization->TabIndex = 30;
-			this->checkBox_localization->Text = L"Переозвучка(дубляж)";
+			this->checkBox_localization->Text = L"Дублирование";
 			this->checkBox_localization->UseVisualStyleBackColor = true;
 			// 
 			// checkBox_music
@@ -450,7 +428,7 @@ namespace Univer {
 			// 
 			this->richTextBox_ideaofvideo->Font = (gcnew System::Drawing::Font(L"Times New Roman", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->richTextBox_ideaofvideo->Location = System::Drawing::Point(420, 67);
+			this->richTextBox_ideaofvideo->Location = System::Drawing::Point(420, 48);
 			this->richTextBox_ideaofvideo->Margin = System::Windows::Forms::Padding(4);
 			this->richTextBox_ideaofvideo->Name = L"richTextBox_ideaofvideo";
 			this->richTextBox_ideaofvideo->Size = System::Drawing::Size(312, 121);
@@ -510,6 +488,7 @@ namespace Univer {
 			this->tabPage1->Size = System::Drawing::Size(810, 599);
 			this->tabPage1->TabIndex = 0;
 			this->tabPage1->Text = L"Данные для связи";
+			this->tabPage1->Click += gcnew System::EventHandler(this, &MyForm::tabPage1_Click);
 			// 
 			// splitContainer1
 			// 
@@ -541,9 +520,7 @@ namespace Univer {
 			this->tabPage2->Controls->Add(this->checkBox_4k);
 			this->tabPage2->Controls->Add(this->richTextBox_ideaofvideo);
 			this->tabPage2->Controls->Add(this->textBox_timing);
-			this->tabPage2->Controls->Add(this->label9);
 			this->tabPage2->Controls->Add(this->label4);
-			this->tabPage2->Controls->Add(this->textBox_type);
 			this->tabPage2->Controls->Add(this->label10);
 			this->tabPage2->Controls->Add(this->label7);
 			this->tabPage2->Controls->Add(this->comboBox_format);
@@ -693,7 +670,9 @@ private: System::Void textBox_FIO_TextChanged(System::Object^ sender, System::Ev
 private: System::Void textBox_Phone_TextChanged(System::Object^ sender, System::EventArgs^ e)
 {}
 private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e)
-{}
+{
+
+}
 private: System::Void richTextBox_ideaofvideo_TextChanged(System::Object^ sender, System::EventArgs^ e)
 {}
 private: System::Void checkBox_interior_CheckedChanged(System::Object^ sender, System::EventArgs^ e)
@@ -711,7 +690,7 @@ private: System::Void button_download_Click(System::Object^ sender, System::Even
 		textBox_email->Text, textBox_timing->Text,
 		checkBox_interior->Checked,checkBox_4k->Checked,
 		checkBox_airvideo->Checked,comboBox_format->SelectedItem->ToString(),
-		richTextBox_ideaofvideo->Text,textBox_type->Text,checkBox_sign_lang_int->Checked,
+		richTextBox_ideaofvideo->Text,checkBox_sign_lang_int->Checked,
 		checkBox_color_corr->Checked, checkBox_subtitles->Checked, checkBox_music->Checked,
 		checkBox_localization->Checked, textBox_location_layout->Text);
 		
@@ -760,6 +739,11 @@ private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e
 }
 
 private: System::Void checkBox_4k_CheckedChanged_1(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void tabPage1_Click(System::Object^ sender, System::EventArgs^ e) {
+	
+}
+private: System::Void textBox_timing_TextChanged_1(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }

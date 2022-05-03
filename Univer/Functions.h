@@ -13,7 +13,7 @@ public:
 	Functions();
 	void ConnectToDB();
 	void Insert(String^ FIO, String^ PhoneNumber, String^ Email, String^ Timing, bool Interior, bool Video4k, 
-		bool Airvideo, String^ Format, String^ Ideaofvideo, String^ vidioType, bool signLangInt, bool colorCorr, bool subtitles,
+		bool Airvideo, String^ Format, String^ Ideaofvideo, bool signLangInt, bool colorCorr, bool subtitles,
 		bool music, bool localization, String^ locationLayout);
 	SqlConnection^ getConn();
 	SqlConnectionStringBuilder^ Functions::getSqlConnectionStringBuilder();
